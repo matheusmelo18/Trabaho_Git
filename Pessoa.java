@@ -9,8 +9,6 @@ public class Pessoa {
         this.idade = idade;
     }
 
-
-
     public String getNome() {
         return nome;
     }
@@ -33,5 +31,11 @@ public class Pessoa {
 
     public void setCpf(int cpf) {
         this.cpf = cpf;
+    }
+
+    public void exibirDados(){
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("CPF: " + this.cpf);
     }
 }
