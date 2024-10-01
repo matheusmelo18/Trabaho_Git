@@ -1,6 +1,3 @@
-<<<<<<< Updated upstream
-public class Cliente {
-=======
 public class Cliente  extends  Pessoa{
 
     public Cliente(String nome, int idade, int cpf){
@@ -9,6 +6,4 @@ public class Cliente  extends  Pessoa{
 
 
     }
-
->>>>>>> Stashed changes
 }
