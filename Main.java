@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Estoque estoque = new Estoque();
-        Cliente cliente = new Cliente("Matheus", 25);
         Funcionario funcionario = new Funcionario("João", 30, "Garçom");
         Fornecedor fornecedor = new Fornecedor("Fornecedor XYZ", "12.345.678/0001-90");
 
@@ -33,12 +32,6 @@ public class Main {
                     estoque.listarEstoque();
                     break;
                 case 4:
-                    cliente.adicionarPedido(new Item("Refrigerante", 5.0));
-                    break;
-                case 5:
-                    cliente.listarPedidos();
-                    break;
-                case 6:
                     opcao = true;
                     break;
                 default:
