@@ -17,4 +17,5 @@ public class Main {
         estoque.removerPorNome("Carne");
         estoque.imprimirEstoque();
     }
+
 }

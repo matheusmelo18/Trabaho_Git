@@ -3,12 +3,17 @@ public class Item{
 	private double preco;
 	private int qtd;
 	private int id;
+	private String carne;
 
-	public Item(String nome, int qtd, int id, double preco) {
+	public Item(String nome, int qtd, int id, double preco, String carne) {
 		this.nome = nome;
 		this.id = id;
 		this.qtd = qtd;
 		this.preco = preco;
+		this.carne = carne;
+	}
+
+	public Item(String carne, int qtd) {
 	}
 
 	public String getNome() {
