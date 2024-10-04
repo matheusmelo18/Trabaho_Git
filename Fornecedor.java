@@ -1,42 +1,22 @@
 public class Fornecedor {
-
 	private String nome;
-	private int id;
-	private Item item; 
-	
+	private String cnpj;
 
-	public Fornecedor(String nome, int id, Item elem){ 
+	public Fornecedor(String nome, String cnpj) {
 		this.nome = nome;
-		this.id = id;
-		this.item = elem;
+		this.cnpj = cnpj;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public int getId() {
-		return id;
+	public String getCnpj() {
+		return cnpj;
 	}
 
-	public Item getItem() {
-		return item;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public void setItem(Item elem) {
-		this.item = elem;
-	}
-	
-	@Override
-	public String toString() {
-		return "##Fornecedor "+id+"##\n"+"Nome: "+nome+"\nNome do item: "+item.getNome()+"\nPreço do item: "+item.getPreco();
+	public void fornecerItem(Estoque estoque, Item item) {
+		estoque.adicionarItem(item);
+		System.out.println("Fornecedor " + nome + " forneceu o item: " + item.getNome());
 	}
 }
