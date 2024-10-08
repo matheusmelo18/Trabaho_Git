@@ -23,10 +23,10 @@ public class Main {
 
             switch (escolha) {
                 case 1:
-                    fornecedor.fornecerItem(estoque, new Item("Pizza", 40.0));
+                    fornecedor.fornecerItem(estoque, new Item("Pizza", 40));
                     break;
                 case 2:
-                    estoque.removerItem(new Item("Pizza", 40.0));  // Remover com base no item
+                    estoque.removerItem(new Item("Pizza", 40));  // Remover com base no item
                     break;
                 case 3:
                     estoque.listarEstoque();
@@ -35,7 +35,8 @@ public class Main {
                     opcao = true;
                     break;
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("Saindo");
+                    scanner.close();
             }
         } while (!opcao);
 

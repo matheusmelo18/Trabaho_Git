@@ -1,22 +1,39 @@
+import java.util.Objects;
+
 public class Item {
 	private String nome;
-	private double valor;
+	private int quantidade;
 
-	public Item(String nome, double valor) {
+	// Construtor, getters e setters
+
+	public Item(String nome, int quantidade) {
 		this.nome = nome;
-		this.valor = valor;
+		this.quantidade = quantidade;
 	}
 
 	public String getNome() {
 		return nome;
 	}
 
-	public double getValor() {
-		return valor;
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Item item = (Item) o;
+		return Objects.equals(nome, item.nome);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome);
 	}
 
 	@Override
 	public String toString() {
-		return nome + " - R$" + valor;
+		return "Nome: " + nome + ", Quantidade: " + quantidade;
 	}
 }

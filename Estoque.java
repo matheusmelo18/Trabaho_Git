@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Estoque {
-    private List<Item> itens;
+    private final List<Item> itens;
 
     public Estoque() {
         this.itens = new ArrayList<>();
@@ -13,10 +13,10 @@ public class Estoque {
         System.out.println("Item adicionado ao estoque: " + item.getNome());
     }
 
-    public void removerItem(Item item) {
-        if (itens.remove(item)) {
+    public void removerItem(Item item){
+        if(itens.remove(item)){
             System.out.println("Item removido do estoque: " + item.getNome());
-        } else {
+        }else{
             System.out.println("Erro: Item não encontrado no estoque.");
         }
     }
