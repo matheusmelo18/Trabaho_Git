@@ -1,26 +1,39 @@
-public class Item{
-private String nome;
-private double preco;
-private int qtd;
-private int id;
+import java.util.Objects;
 
-public Item(String nome, int qtd, int id, double preco){
-this.nome = nome;
-this.id = id;
-this.qtd = qtd;
-this.preco = preco;
-}
+public class Item {
+	private String nome;
+	private int quantidade;
 
-public String getNome(){return nome;}
-public int getId(){return id;}
-public int getQtd(){return qtd;}
-public double getPreco(){return preco;}
+	// Construtor, getters e setters
 
-public void setNome(String nome){this.nome = nome;}
-public void setId(int id){this.id = id;}
-public void setQtd(int qtd){this.qtd = qtd;}
-public void setPreco(double preco){this.preco = preco;}
+	public Item(String nome, int quantidade) {
+		this.nome = nome;
+		this.quantidade = quantidade;
+	}
 
-@Override
-public String toString(){ return "##Item "+id+"##\n"+"Nome: "+nome+"\nQuantidade: "+qtd+"\nPreço: "+preco;}
+	public String getNome() {
+		return nome;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Item item = (Item) o;
+		return Objects.equals(nome, item.nome);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nome);
+	}
+
+	@Override
+	public String toString() {
+		return "Nome: " + nome + ", Quantidade: " + quantidade;
+	}
 }
