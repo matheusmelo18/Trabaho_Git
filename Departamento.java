@@ -28,7 +28,7 @@ public class Departamento {
         this.id = id;
     }
 
-    public boolean isPermissao() {
+    public boolean verificaPermissao() {
         return permissao;
     }
 
