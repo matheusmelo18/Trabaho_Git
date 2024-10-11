@@ -2,10 +2,7 @@ Integrantes do grupo:
 
 Nome e usuario no github
 - Fernando de Miranda Lisboa Neto - ferlisboaneto
-
-
-
-
+- Nicolas Dutra Tondo - NicolasTondo
 
 
 Fluxo de trabalho:
