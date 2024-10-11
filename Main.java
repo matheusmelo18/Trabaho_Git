@@ -9,12 +9,10 @@ public class Main {
         usuarios.add(new Usuario(1, "João", Usuario.TipoUsuario.ADMINISTRADOR));
         usuarios.add(new Usuario(2, "Maria", Usuario.TipoUsuario.FUNCIONARIO));
 
-
         Estoque estoque = new Estoque();
-        Funcionario funcionario = new Funcionario("João", 30, "Garçom");
+        Funcionario funcionario = new Funcionario("João", 30, "Garçom"); // Criação do funcionário
         Fornecedor fornecedor = new Fornecedor("Fornecedor XYZ", "12.345.678/0001-90");
 
-        // Simulação de interações
         Scanner scanner = new Scanner(System.in);
         boolean opcao = false;
 
@@ -32,10 +30,13 @@ public class Main {
 
             switch (escolha) {
                 case 1:
+                    System.out
+                            .println("Funcionário " + funcionario.getNome() + " está adicionando um item ao estoque.");
                     fornecedor.fornecerItem(estoque, new Item("Pizza", 40.0));
                     break;
                 case 2:
-                    estoque.removerItem(new Item("Pizza", 40.0));  // Remover com base no item
+                    System.out.println("Funcionário " + funcionario.getNome() + " está removendo um item do estoque.");
+                    estoque.removerItem(new Item("Pizza", 40.0));
                     break;
                 case 3:
                     estoque.listarEstoque();
