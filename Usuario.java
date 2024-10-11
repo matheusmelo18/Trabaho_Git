@@ -1,12 +1,18 @@
 public class Usuario {
     private int id;
     private String nome;
-    private TipoUsuario tipo;
+    private String tipo; // "funcionario" ou "administrador"
+    private String cargo;
+    private String iniciais;
+    private Departamento departamento;
 
-    public Usuario(int id, String nome, TipoUsuario tipo) {
+    public Usuario(int id, String nome, String tipo, String cargo, String iniciais, Departamento departamento) {
         this.id = id;
         this.nome = nome;
         this.tipo = tipo;
+        this.cargo = cargo;
+        this.iniciais = iniciais;
+        this.departamento = departamento;
     }
 
     public int getId() {
@@ -17,16 +23,23 @@ public class Usuario {
         return nome;
     }
 
-    public TipoUsuario getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    @Override
-    public String toString() {
-        return "ID: " + id + ", Nome: " + nome + ", Tipo: " + tipo;
+    public String getCargo() {
+        return cargo;
     }
 
-    enum TipoUsuario {
-        ADMINISTRADOR, FUNCIONARIO
+    public String getIniciais() {
+        return iniciais;
+    }
+
+    public Departamento getDepartamento() {
+        return departamento;
+    }
+
+    public boolean isAdministrador() {
+        return "administrador".equalsIgnoreCase(tipo);
     }
 }

@@ -1,22 +1,27 @@
 public class Item {
-	private String nome;
-	private double valor;
+	private String descricao;
+	private double valorUnitario;
+	private int quantidade;
 
-	public Item(String nome, double valor) {
-		this.nome = nome;
-		this.valor = valor;
+	public Item(String descricao, double valorUnitario, int quantidade) {
+		this.descricao = descricao;
+		this.valorUnitario = valorUnitario;
+		this.quantidade = quantidade;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getDescricao() {
+		return descricao;
 	}
 
-	public double getValor() {
-		return valor;
+	public double getValorUnitario() {
+		return valorUnitario;
 	}
 
-	@Override
-	public String toString() {
-		return nome + " - R$" + valor;
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public double getValorTotal() {
+		return valorUnitario * quantidade;
 	}
 }
