@@ -18,7 +18,7 @@ public class SistemaAquisoes {
         Departamento rh = new Departamento("RH", 500);
         Departamento admin = new Departamento("Administracao", 2000);
         Departamento cozinha = new Departamento("Cozinha", 1500);
-        Departamento atendimento = new Departamento("Atendimento", 800);
+        Departamento atendimento = new Departamento("Atendimento", 850);
 
         usuarios.add(new Usuario(1, "Amanda Cardoso", "funcionario", "Analista", "AC", financeiro));
         usuarios.add(new Usuario(2, "Bruno Oliveira", "administrador", "Gerente", "BO", rh));
