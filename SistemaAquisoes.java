@@ -10,6 +10,32 @@ public class SistemaAquisoes {
     public SistemaAquisoes() {
         this.usuarios = new ArrayList<>();
         this.pedidos = new ArrayList<>();
+        inicializarDados();
+    }
+
+    private void inicializarDados() {
+        Departamento financeiro = new Departamento("Financeiro", 1000);
+        Departamento rh = new Departamento("RH", 500);
+        Departamento admin = new Departamento("Administracao", 2000);
+        Departamento cozinha = new Departamento("Cozinha", 1500);
+        Departamento atendimento = new Departamento("Atendimento", 800);
+
+        usuarios.add(new Usuario(1, "Amanda Cardoso", "funcionario", "Analista", "AC", financeiro));
+        usuarios.add(new Usuario(2, "Bruno Oliveira", "administrador", "Gerente", "BO", rh));
+        usuarios.add(new Usuario(3, "Carlos Almeida", "funcionario", "Dono", "CA", admin));
+        usuarios.add(new Usuario(4, "Diana Souza", "administrador", "Chefe principal", "DS", cozinha));
+        usuarios.add(new Usuario(5, "Eduardo Marques", "funcionario", "Garçom", "EM", atendimento));
+        usuarios.add(new Usuario(6, "Fernando Marques", "funcionario", "Garçom", "FM", atendimento));
+        usuarios.add(new Usuario(7, "Diego Gomes", "funcionario", "Chapeiro", "DG", cozinha));
+        usuarios.add(new Usuario(8, "Arthur Almeida", "funcionario", "Contador", "AA", financeiro));
+        usuarios.add(new Usuario(9, "Leonardo Lima", "administrador", "Dono", "LL", admin));
+        usuarios.add(new Usuario(10, "João Gomes", "funcionario", "Garçom", "JG", atendimento));
+        usuarios.add(new Usuario(11, "Carolina Gomes", "funcionario", "Atendente de caixa", "CG", atendimento));
+        usuarios.add(new Usuario(12, "Josiane Amaral", "administrador", "Gerente de caixa", "JA", atendimento));
+        usuarios.add(new Usuario(13, "Rafael Machado", "funcionario", "Chapeiro", "RM", cozinha));
+        usuarios.add(new Usuario(14, "Fernando Neves", "funcionario", "RH", "FN", rh));
+        usuarios.add(new Usuario(15, "Danilo Pereira", "administrador", "Garçom", "DP", atendimento));
+
     }
 
     public void escolherUsuario(int id) {
@@ -21,6 +47,7 @@ public class SistemaAquisoes {
             }
         }
     }
+
     public void registrarPedido(List<Item> itens) {
         if (usuarioAtual == null) {
             System.out.println("Nenhum usuário selecionado.");
@@ -80,5 +107,4 @@ public class SistemaAquisoes {
             }
         }
     }
-}
 }
